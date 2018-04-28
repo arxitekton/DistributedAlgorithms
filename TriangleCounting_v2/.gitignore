@@ -1,0 +1,10 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.idea/inspectionProfiles/
+.idea/workspace.xml
+#src/main/resources/
+target/
+classes/
