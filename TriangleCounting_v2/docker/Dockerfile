@@ -1,5 +1,8 @@
-FROM docker.io/sequenceiq/spark
-ADD target /target
-WORKDIR /target
+FROM p7hb/docker-spark
 
-ENTRYPOINT ["spark-submit", "--class", "TriangleCountingHW", "tri.jar"]
+ADD artifact /artifact
+ADD followers.txt /artifact/src/main/resources/GraphxData/followers.txt
+
+WORKDIR /artifact
+
+ENTRYPOINT ["spark-submit", "--class", "graphxTC.TriangleCountingHW", "trianglecount-1.0-SNAPSHOT.jar"]

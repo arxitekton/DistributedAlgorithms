@@ -17,7 +17,7 @@
         <java.version>1.8</java.version>
         <scala.minor.version>2.11</scala.minor.version>
         <scala.complete.version>${scala.minor.version}.8</scala.complete.version>
-        <spark.version>2.2.0</spark.version>
+        <spark.version>2.1.0</spark.version>
     </properties>
 
 
@@ -27,11 +27,13 @@
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scalap</artifactId>
                 <version>${scala.complete.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-compiler</artifactId>
                 <version>${scala.complete.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -97,7 +99,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.0.0</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
